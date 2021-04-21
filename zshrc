@@ -104,4 +104,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.local.zshrc
+source ~/.config/zshrc
+## 默认 ctrl-s： 终端停止更新, 冻结
+## 默认 ctrl-q:  解冻
+## vim 为了映射key 功能，映射 ctrl-s 保存键使用
+stty start undef
+stty stop undef
+setopt noflowcontrol
